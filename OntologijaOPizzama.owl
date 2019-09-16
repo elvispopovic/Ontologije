@@ -1,0 +1,1365 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#"
+     xml:base="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Ontologija o pizama</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaAsortimanIz -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaAsortimanIz">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizzeria"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Drzava"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#prodajePizzu"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaZemljuPorijekla"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaSastojak"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZaPizzu"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaSastojak -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaSastojak">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeSastojakOd"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaTijesto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaTijesto">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaSastojak"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#TijestoZaPizzu"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaZemljuPorijekla -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaZemljuPorijekla">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Drzava"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeNadjevOd -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeNadjevOd">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeSastojakOd"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZaPizzu"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeSastojakOd -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeSastojakOd">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeTijestoOd -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeTijestoOd">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeSastojakOd"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#TijestoZaPizzu"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Zacinjenost"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#prodajePizzu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#prodajePizzu">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizzeria"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#OdredjenaPizza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaCijenu -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaCijenu">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaKalorija -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaKalorija">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#DebeloTijesto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#DebeloTijesto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#TijestoZaPizzu"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#TankoTijesto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Drzava -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Drzava">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Francuska"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Italija"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Njemacka"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#SAD"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#VelikaBritanija"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#LjutiNadjev -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#LjutiNadjev">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZaPizzu"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostLjuto"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#MesnaSrednjeZacinjena -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#MesnaSrednjeZacinjena">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMeso"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostSrednje"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Nadjev4Sira -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Nadjev4Sira">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSir"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevCrvenaPaprika -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevCrvenaPaprika">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPaprika"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevGljive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevGljive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPovrce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevGorgonzola -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevGorgonzola">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSir"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevIncuni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevIncuni">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMorskiPlodovi"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevJalapenoPaprika -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevJalapenoPaprika">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPaprika"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostLjuto"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevKapari -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevKapari">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPovrce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevKobasice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevKobasice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMeso"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostSrednje"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevKozice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevKozice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMorskiPlodovi"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevLuk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevLuk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPovrce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostSrednje"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMasline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMasline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPovrce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMeso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMeso">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZaPizzu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMorskiPlodovi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMorskiPlodovi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZaPizzu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMozzarella -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMozzarella">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSir"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaZemljuPorijekla"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Italija"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPaprika -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPaprika">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPovrce"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevParmezan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevParmezan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSir"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPovrce -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPovrce">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZaPizzu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevRajcica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevRajcica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPovrce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSalama -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSalama">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMeso"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostSrednje"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSir -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSir">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZaPizzu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSunka -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSunka">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMeso"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevTopljeniSir -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevTopljeniSir">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSir"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevTuna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevTuna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMorskiPlodovi"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZaPizzu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZaPizzu"/>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZacinjenoMeso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZacinjenoMeso">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMeso"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostLjuto"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZelenaPaprika -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZelenaPaprika">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPaprika"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NevegetarijanskaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NevegetarijanskaPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#VegetarijanskaPizza"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#VegetarijanskaPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NiskokaloricnaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NiskokaloricnaPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaKalorija"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#OdredjenaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#OdredjenaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#OptimalnaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#OptimalnaPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZaPizzu"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZaPizzu"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaTijesto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#TijestoZaPizzu"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaCijenu"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaKalorija"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaAmericana -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaAmericana">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#OdredjenaPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevKobasice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevRajcica"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevKobasice"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMozzarella"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevRajcica"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaZemljuPorijekla"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#SAD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZaPizzu"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaAmericanaLjuta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaAmericanaLjuta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#OdredjenaPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevJalapenoPaprika"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevKobasice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevRajcica"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevJalapenoPaprika"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevKobasice"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMozzarella"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevRajcica"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaZemljuPorijekla"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#SAD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaMargherita -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaMargherita">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#OdredjenaPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevRajcica"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMozzarella"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevRajcica"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaZemljuPorijekla"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Italija"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZaPizzu"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaQuatroFormaggi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaQuatroFormaggi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#OdredjenaPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSir"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaZemljuPorijekla"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Italija"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSir"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaSoho -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaSoho">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#OdredjenaPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMasline"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevParmezan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevRajcica"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMasline"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMozzarella"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevParmezan"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevRajcica"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaZemljuPorijekla"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#VelikaBritanija"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizzeria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizzeria"/>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#TankoTijesto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#TankoTijesto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#TijestoZaPizzu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#TijestoZaPizzu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#TijestoZaPizzu"/>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#VegetarijanskaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#VegetarijanskaPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#OdredjenaPizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPovrce"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSir"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPovrce"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSir"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Vegetarijanska_kalorija_300_plus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Vegetarijanska_kalorija_300_plus">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#VegetarijanskaPizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaKalorija"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#VisokokaloricnaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#VisokokaloricnaPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaKalorija"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenaPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZaPizzu"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#jeZacinjena"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostLjuto"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenaPizza1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenaPizza1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#LjutiNadjev"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Zacinjenost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Zacinjenost">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostLjuto"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostSrednje"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Zacinjenost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostLjuto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostLjuto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Zacinjenost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostSrednje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostSrednje">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Zacinjenost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZanimljivaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZanimljivaPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#imaNadjev"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#AmericanaLjutaMala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#AmericanaLjutaMala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaAmericanaLjuta"/>
+        <imaKalorija rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">410</imaKalorija>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#AmericanaLjutaVelika -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#AmericanaLjutaVelika">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaAmericanaLjuta"/>
+        <imaKalorija rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">547</imaKalorija>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#AmericanaMala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#AmericanaMala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaAmericana"/>
+        <imaKalorija rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">386</imaKalorija>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#AmericanaVelika -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#AmericanaVelika">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaAmericana"/>
+        <imaKalorija rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">509</imaKalorija>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Francuska -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Francuska">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Drzava"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Italija -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Italija">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Drzava"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#MargheritaMala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#MargheritaMala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaMargherita"/>
+        <imaKalorija rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">263</imaKalorija>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#MargheritaVelika -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#MargheritaVelika">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaMargherita"/>
+        <imaKalorija rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">395</imaKalorija>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Njemacka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Njemacka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Drzava"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzeriaBarok -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzeriaBarok">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizzeria"/>
+        <prodajePizzu rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#MargheritaMala"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzeriaTulipan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzeriaTulipan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizzeria"/>
+        <prodajePizzu rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#AmericanaMala"/>
+        <prodajePizzu rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#SohoMala"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#QuattroFormaggiMala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#QuattroFormaggiMala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaQuatroFormaggi"/>
+        <imaKalorija rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">542</imaKalorija>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#QuattroFormaggiVelika -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#QuattroFormaggiVelika">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaQuatroFormaggi"/>
+        <imaKalorija rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">723</imaKalorija>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#SAD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#SAD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Drzava"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#SohoMala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#SohoMala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaSoho"/>
+        <imaKalorija rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">330</imaKalorija>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#SohoVelika -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#SohoVelika">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaSoho"/>
+        <imaKalorija rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">495</imaKalorija>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#VelikaBritanija -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#VelikaBritanija">
+        <rdf:type rdf:resource="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Drzava"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Nadjev4Sira"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevGorgonzola"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMozzarella"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevParmezan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevTopljeniSir"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevCrvenaPaprika"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevJalapenoPaprika"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZelenaPaprika"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevGljive"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevKapari"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevLuk"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMasline"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPaprika"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevRajcica"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevIncuni"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevKozice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevTuna"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevKobasice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSalama"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSunka"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZacinjenoMeso"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMeso"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevMorskiPlodovi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevPovrce"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevSir"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#NadjevZaPizzu"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#Pizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#TijestoZaPizzu"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaAmericana"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaAmericanaLjuta"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaMargherita"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#PizzaSoho"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostBlago"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostLjuto"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/epc/ontologies/2019/3/Pizze#ZacinjenostSrednje"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
