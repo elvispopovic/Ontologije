@@ -1,0 +1,12 @@
+use-project /owlcpp : $(OWLCPP[1]) ;
+
+exe OntoProg
+   : #sources
+      Razvoj.cpp
+   : #requirements
+      <link>static
+      <library>/owlcpp//rdf
+      <library>/owlcpp//io
+      <library>/owlcpp//logic
+      <library>/boost/program_options
+;

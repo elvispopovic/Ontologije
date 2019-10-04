@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/elvis/uzorci/2019/Norm#"
+     xml:base="http://www.semanticweb.org/elvis/uzorci/2019/Norm"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/Norm"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/Norm#obavljaFunkciju -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/Norm#obavljaFunkciju"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/Norm#Entitet1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Entitet1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#PrimitivnaOs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#obavljaFunkciju"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Funkcija1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/Norm#Entitet2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Entitet2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#PrimitivnaOs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#obavljaFunkciju"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Funkcija2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/Norm#Entitet3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Entitet3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#PrimitivnaOs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#obavljaFunkciju"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Funkcija1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#obavljaFunkciju"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Funkcija2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/Norm#Funkcija1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Funkcija1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Funkcije"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/Norm#Funkcija2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Funkcija2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Funkcije"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/Norm#Funkcije -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Funkcije"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/Norm#Modul1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Modul1">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#obavljaFunkciju"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Funkcija1"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Podjela"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/Norm#Modul2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Modul2">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#obavljaFunkciju"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Funkcija2"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Podjela"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/Norm#Podjela -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Podjela"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/Norm#PrimitivnaOs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/Norm#PrimitivnaOs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/Norm#Podjela"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
