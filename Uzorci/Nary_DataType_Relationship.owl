@@ -1,0 +1,75 @@
+@prefix : <http://www.semanticweb.org/elvis/ontologies/2019/uzorci#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/elvis/ontologies/2019/uzorci> .
+
+<http://www.semanticweb.org/elvis/ontologies/2019/uzorci> rdf:type owl:Ontology .
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#jedinica1
+<http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#jedinica1> rdf:type owl:DatatypeProperty ,
+                                                                               owl:FunctionalProperty .
+
+
+###  http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#jedinica2
+<http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#jedinica2> rdf:type owl:DatatypeProperty ,
+                                                                               owl:FunctionalProperty .
+
+
+###  http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#vrijednost1
+<http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#vrijednost1> rdf:type owl:DatatypeProperty ,
+                                                                                 owl:FunctionalProperty .
+
+
+###  http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#vrijednost2
+<http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#vrijednost2> rdf:type owl:DatatypeProperty ,
+                                                                                 owl:FunctionalProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#Narna_vrijednost
+<http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#Narna_vrijednost> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty <http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#jedinica1> ;
+                                                                                               owl:someValuesFrom xsd:string
+                                                                                             ] ,
+                                                                                             [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty <http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#jedinica2> ;
+                                                                                               owl:someValuesFrom xsd:string
+                                                                                             ] ,
+                                                                                             [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty <http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#vrijednost1> ;
+                                                                                               owl:someValuesFrom xsd:float
+                                                                                             ] ,
+                                                                                             [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty <http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#vrijednost2> ;
+                                                                                               owl:someValuesFrom xsd:float
+                                                                                             ] ,
+                                                                                             [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty <http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#jedinica1> ;
+                                                                                               owl:hasValue "MjeraA"
+                                                                                             ] ,
+                                                                                             [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty <http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#jedinica2> ;
+                                                                                               owl:hasValue "MjeraB"
+                                                                                             ] ,
+                                                                                             [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty <http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#vrijednost1> ;
+                                                                                               owl:hasValue 101.625
+                                                                                             ] ,
+                                                                                             [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty <http://www.semanticweb.org/elvis/ontologies/2019/7/uzorci#vrijednost2> ;
+                                                                                               owl:hasValue "-10.5"^^xsd:float
+                                                                                             ] .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

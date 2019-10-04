@@ -1,0 +1,72 @@
+@prefix : <http://www.semanticweb.org/elvis/uzorci/2019/EQ#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/elvis/uzorci/2019/EQ> .
+
+<http://www.semanticweb.org/elvis/uzorci/2019/EQ> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/EPQ#imaKvalifikaciju
+<http://www.semanticweb.org/elvis/uzorci/2019/EPQ#imaKvalifikaciju> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Entitet1
+<http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Entitet1> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.semanticweb.org/elvis/uzorci/2019/EPQ#KategorijaEntiteta> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.semanticweb.org/elvis/uzorci/2019/EPQ#imaKvalifikaciju> ;
+                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                              owl:onClass <http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Entitet1>
+                                                                            ] .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Entitet2
+<http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Entitet2> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.semanticweb.org/elvis/uzorci/2019/EPQ#KategorijaEntiteta> .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/EPQ#KategorijaEntiteta
+<http://www.semanticweb.org/elvis/uzorci/2019/EPQ#KategorijaEntiteta> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <http://www.semanticweb.org/elvis/uzorci/2019/EPQ#imaKvalifikaciju> ;
+                                                                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                        owl:onClass <http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Kvalifikacija>
+                                                                                      ] .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Kvalifikacija
+<http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Kvalifikacija> rdf:type owl:Class ;
+                                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                       owl:unionOf ( <http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Vrijednost1>
+                                                                                                     <http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Vrijednost2>
+                                                                                                   )
+                                                                                     ] ;
+                                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty [ owl:inverseOf <http://www.semanticweb.org/elvis/uzorci/2019/EPQ#imaKvalifikaciju>
+                                                                                                  ] ;
+                                                                                   owl:allValuesFrom <http://www.semanticweb.org/elvis/uzorci/2019/EPQ#KategorijaEntiteta>
+                                                                                 ] .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Vrijednost1
+<http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Vrijednost1> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Kvalifikacija> ;
+                                                               owl:disjointWith <http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Vrijednost2> .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Vrijednost2
+<http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Vrijednost2> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/elvis/uzorci/2019/EPQ#Kvalifikacija> .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
