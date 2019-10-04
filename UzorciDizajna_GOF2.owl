@@ -1,0 +1,497 @@
+@prefix : <http://www.semanticweb.org/elvis/uzorci/2019/GOF#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/elvis/uzorci/2019/GOF> .
+
+<http://www.semanticweb.org/elvis/uzorci/2019/GOF> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#ReifikacijskiElementi
+:ReifikacijskiElementi rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaNoviNaziv
+:imaNoviNaziv rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              owl:inverseOf :imaStariNaziv .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaPredikat
+:imaPredikat rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :ReifikacijskiElementi ;
+             rdfs:range :Uzorci .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaStariNaziv
+:imaStariNaziv rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaSubjekt
+:imaSubjekt rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :ReifikacijskiElementi ;
+            rdfs:range :Uzorci .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeKoristenOd
+:jeKoristenOd rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              owl:inverseOf :koristi ;
+              rdf:type owl:AsymmetricProperty ;
+              rdfs:domain :Uzorci ;
+              rdfs:range :Uzorci .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeKoristenOdNovog
+:jeKoristenOdNovog rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain :Uzorci ;
+                   rdfs:range :Uzorci ;
+                   owl:propertyChainAxiom ( :imaStariNaziv
+                                            :jeKoristenOd
+                                            :imaNoviNaziv
+                                          ) .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeKoristenOdNovog1
+:jeKoristenOdNovog1 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :jeKoristenOdNovog ;
+                    owl:propertyChainAxiom ( :imaStariNaziv
+                                             :jeKoristenOd
+                                           ) .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeSlican
+:jeSlican rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdf:type owl:SymmetricProperty ;
+          rdfs:domain :Uzorci ;
+          rdfs:range :Uzorci .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeSlican1
+:jeSlican1 rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :jeSlicanNovom ;
+           rdf:type owl:SymmetricProperty ;
+           owl:propertyChainAxiom ( :jeSlican
+                                    :imaNoviNaziv
+                                  ) .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeSlicanNovom
+:jeSlicanNovom rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdf:type owl:SymmetricProperty ;
+               rdfs:domain :Uzorci ;
+               rdfs:range :Uzorci ;
+               owl:propertyChainAxiom ( :imaStariNaziv
+                                        :jeSlican
+                                        :imaNoviNaziv
+                                      ) .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#koristi
+:koristi rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdf:type owl:AsymmetricProperty ;
+         rdfs:domain :Uzorci ;
+         rdfs:range :Uzorci .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#koristiNovi
+:koristiNovi rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             owl:propertyChainAxiom ( :imaStariNaziv
+                                      :koristi
+                                      :imaNoviNaziv
+                                    ) .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#koristiNovi1
+:koristiNovi1 rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :koristiNovi ;
+              owl:propertyChainAxiom ( :koristi
+                                       :imaNoviNaziv
+                                     ) .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#mozeSeKombiniratiSa
+:mozeSeKombiniratiSa rdf:type owl:ObjectProperty ,
+                              owl:SymmetricProperty ;
+                     rdfs:domain :Uzorci ;
+                     rdfs:range :Uzorci .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#mozeSeKombiniratiSaNovim
+:mozeSeKombiniratiSaNovim rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty ;
+                          rdf:type owl:SymmetricProperty ;
+                          rdfs:domain :Uzorci ;
+                          rdfs:range :Uzorci ;
+                          owl:propertyChainAxiom ( :imaStariNaziv
+                                                   :mozeSeKombiniratiSa
+                                                   :imaNoviNaziv
+                                                 ) .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#mozeSeKombiniratiSaNovim1
+:mozeSeKombiniratiSaNovim1 rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :mozeSeKombiniratiSaNovim ;
+                           rdf:type owl:SymmetricProperty ;
+                           owl:propertyChainAxiom ( :mozeSeKombiniratiSa
+                                                    :imaNoviNaziv
+                                                  ) .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaJakostVeze
+:imaJakostVeze rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeBidirekcionalna
+:jeBidirekcionalna rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#KlasniUzorci
+:KlasniUzorci rdf:type owl:Class ;
+              rdfs:subClassOf :Uzorci ;
+              owl:disjointWith :ObjektniUzorci ;
+              rdfs:comment "Podjela po području"@hr .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#MnogoGaKoriste
+:MnogoGaKoriste rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty :jeKoristenOd ;
+                                      owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :Uzorci
+                                    ] .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#MnogoSeKombinira
+:MnogoSeKombinira rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty :mozeSeKombiniratiSa ;
+                                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                        owl:onClass :Uzorci
+                                      ] .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#MnogoSlicnosti
+:MnogoSlicnosti rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty :jeSlican ;
+                                      owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :Uzorci
+                                    ] .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci
+:ObjektniUzorci rdf:type owl:Class ;
+                rdfs:subClassOf :Uzorci ;
+                rdfs:comment "Podjela po području"@hr .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Reifikacije
+:Reifikacije rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#SlicniSuBuilderu
+:SlicniSuBuilderu rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty [ owl:inverseOf :jeSlican
+                                                       ] ;
+                                        owl:hasValue :Builder
+                                      ] .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#TezinskeKombinacije
+:TezinskeKombinacije rdf:type owl:Class ;
+                     rdfs:subClassOf :Reifikacije ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :imaPredikat ;
+                                       owl:someValuesFrom :Uzorci
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :imaSubjekt ;
+                                       owl:someValuesFrom :Uzorci
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :imaJakostVeze ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:decimal
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :jeBidirekcionalna ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:boolean
+                                     ] .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci
+:Uzorci rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciKreiranja
+:UzorciKreiranja rdf:type owl:Class ;
+                 rdfs:subClassOf :Uzorci ;
+                 rdfs:comment "Podjela po namjeni"@hr .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciPonasanja
+:UzorciPonasanja rdf:type owl:Class ;
+                 rdfs:subClassOf :Uzorci ;
+                 rdfs:comment "Podjela po namjeni"@hr .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciStrukture
+:UzorciStrukture rdf:type owl:Class ;
+                 rdfs:subClassOf :Uzorci ;
+                 rdfs:comment "Podjela po namjeni"@hr .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Zastarjelo
+:Zastarjelo rdf:type owl:Class ;
+            rdfs:subClassOf :Uzorci .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Abstract_factory
+:Abstract_factory rdf:type owl:NamedIndividual ,
+                           :ObjektniUzorci ,
+                           :UzorciKreiranja ;
+                  :jeSlican :Builder ,
+                            :Prototype ;
+                  :koristi :Factory_method .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Adapter_klasni
+:Adapter_klasni rdf:type owl:NamedIndividual ,
+                         :KlasniUzorci ,
+                         :UzorciStrukture ;
+                :jeSlican :Wrapper .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Adapter_objektni
+:Adapter_objektni rdf:type owl:NamedIndividual ,
+                           :ObjektniUzorci ,
+                           :UzorciStrukture ;
+                  :jeSlican :Wrapper .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Bridge
+:Bridge rdf:type owl:NamedIndividual ,
+                 :ObjektniUzorci ,
+                 :UzorciStrukture .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Builder
+:Builder rdf:type owl:NamedIndividual ,
+                  :ObjektniUzorci ,
+                  :UzorciKreiranja ;
+         :jeSlican :Strategy ;
+         :mozeSeKombiniratiSa :Composite .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Chain_of_responsibility
+:Chain_of_responsibility rdf:type owl:NamedIndividual ,
+                                  :ObjektniUzorci ,
+                                  :UzorciPonasanja ;
+                         :koristi :Composite ,
+                                  :Wrapper .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Command
+:Command rdf:type owl:NamedIndividual ,
+                  :ObjektniUzorci ,
+                  :UzorciPonasanja ;
+         :koristi :Composite ,
+                  :Memento .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Composite
+:Composite rdf:type owl:NamedIndividual ,
+                    :ObjektniUzorci ,
+                    :UzorciStrukture ;
+           :mozeSeKombiniratiSa :Iterator ,
+                                :Walker ,
+                                :Wrapper .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Decorator
+:Decorator rdf:type owl:NamedIndividual ,
+                    :ObjektniUzorci ,
+                    :UzorciStrukture .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Facade
+:Facade rdf:type owl:NamedIndividual ,
+                 :ObjektniUzorci ,
+                 :UzorciStrukture .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#FactoryMethod_TemplateMethod
+:FactoryMethod_TemplateMethod rdf:type owl:NamedIndividual ,
+                                       :TezinskeKombinacije ;
+                              :imaPredikat :Template_method ;
+                              :imaSubjekt :Factory_method ;
+                              :imaJakostVeze 0.8 .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Factory_method
+:Factory_method rdf:type owl:NamedIndividual ,
+                         :KlasniUzorci ,
+                         :UzorciKreiranja ;
+                :mozeSeKombiniratiSa :Template_method .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Flyweight
+:Flyweight rdf:type owl:NamedIndividual ,
+                    :ObjektniUzorci ,
+                    :UzorciStrukture ;
+           :jeSlican :Strategy ;
+           :koristi :Abstract_factory .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Glue
+:Glue rdf:type owl:NamedIndividual ,
+               :Zastarjelo ;
+      :imaNoviNaziv :Facade ;
+      :jeSlican :Mediator .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Interpreter
+:Interpreter rdf:type owl:NamedIndividual ,
+                      :KlasniUzorci ,
+                      :UzorciPonasanja ;
+             :koristi :Composite ,
+                      :Iterator ,
+                      :Walker .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Iterator
+:Iterator rdf:type owl:NamedIndividual ,
+                   :ObjektniUzorci ,
+                   :UzorciPonasanja ;
+          :koristi :Memento .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Mediator
+:Mediator rdf:type owl:NamedIndividual ,
+                   :ObjektniUzorci ,
+                   :UzorciPonasanja .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Memento
+:Memento rdf:type owl:NamedIndividual ,
+                  :ObjektniUzorci ,
+                  :UzorciPonasanja .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Observer
+:Observer rdf:type owl:NamedIndividual ,
+                   :ObjektniUzorci ,
+                   :UzorciPonasanja ;
+          :koristi :Solitaire .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Prototype
+:Prototype rdf:type owl:NamedIndividual ,
+                    :ObjektniUzorci ,
+                    :UzorciKreiranja ;
+           :jeSlican :Builder ;
+           :koristi :Solitaire .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Proxy
+:Proxy rdf:type owl:NamedIndividual ,
+                :ObjektniUzorci ,
+                :UzorciStrukture ;
+       :jeSlican :Adapter_klasni ,
+                 :Adapter_objektni ,
+                 :Wrapper .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Singleton
+:Singleton rdf:type owl:NamedIndividual ,
+                    :ObjektniUzorci ,
+                    :UzorciKreiranja .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Solitaire
+:Solitaire rdf:type owl:NamedIndividual ,
+                    :Zastarjelo ;
+           :imaNoviNaziv :Singleton .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#State
+:State rdf:type owl:NamedIndividual ,
+                :ObjektniUzorci ,
+                :UzorciPonasanja ;
+       :jeSlican :Bridge ;
+       :mozeSeKombiniratiSa :Chain_of_responsibility .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Strategy
+:Strategy rdf:type owl:NamedIndividual ,
+                   :ObjektniUzorci ,
+                   :UzorciPonasanja ;
+          :jeSlican :State ,
+                    :Walker .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Template_method
+:Template_method rdf:type owl:NamedIndividual ,
+                          :KlasniUzorci ,
+                          :UzorciPonasanja .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Visitor
+:Visitor rdf:type owl:NamedIndividual ,
+                  :ObjektniUzorci ,
+                  :UzorciPonasanja .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Walker
+:Walker rdf:type owl:NamedIndividual ,
+                 :Zastarjelo ;
+        :imaNoviNaziv :Visitor ;
+        :mozeSeKombiniratiSa :Iterator .
+
+
+###  http://www.semanticweb.org/elvis/uzorci/2019/GOF#Wrapper
+:Wrapper rdf:type owl:NamedIndividual ,
+                  :Zastarjelo ;
+         :imaNoviNaziv :Decorator .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :UzorciKreiranja
+                :UzorciPonasanja
+                :UzorciStrukture
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

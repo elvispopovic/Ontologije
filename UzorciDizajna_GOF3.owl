@@ -1,0 +1,785 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/elvis/uzorci/2019/GOF#"
+     xml:base="http://www.semanticweb.org/elvis/uzorci/2019/GOF"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#ReifikacijskiElementi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ReifikacijskiElementi"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaNoviNaziv -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaNoviNaziv">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaStariNaziv"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaPredikat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaPredikat">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ReifikacijskiElementi"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaStariNaziv -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaStariNaziv">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaSubjekt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaSubjekt">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ReifikacijskiElementi"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaVezu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaVezu">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ReifikacijskiElementi"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Reifikacija"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeKoristenOd -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeKoristenOd">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#koristi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeKoristenOdNovog -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeKoristenOdNovog">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaStariNaziv"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeKoristenOd"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaNoviNaziv"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeKoristenOdNovog1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeKoristenOdNovog1">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeKoristenOdNovog"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaStariNaziv"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeKoristenOd"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#jePovezanS -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jePovezanS">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ReifikacijskiElementi"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Reifikacija"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeSlican -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeSlican">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeSlican1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeSlican1">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeSlicanNovom"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeSlican"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaNoviNaziv"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeSlicanNovom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeSlicanNovom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaStariNaziv"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeSlican"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaNoviNaziv"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#koristi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#koristi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#koristiNovi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#koristiNovi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaStariNaziv"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#koristi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaNoviNaziv"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#koristiNovi1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#koristiNovi1">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#koristiNovi"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#koristi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaNoviNaziv"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#mozeSeKombiniratiSa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#mozeSeKombiniratiSa">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#mozeSeKombiniratiSaNovim -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#mozeSeKombiniratiSaNovim">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaStariNaziv"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#mozeSeKombiniratiSa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaNoviNaziv"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#mozeSeKombiniratiSaNovim1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#mozeSeKombiniratiSaNovim1">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#mozeSeKombiniratiSaNovim"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#mozeSeKombiniratiSa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaNoviNaziv"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaJakostVeze -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaJakostVeze">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Reifikacija"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeBidirekcionalna -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeBidirekcionalna">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Reifikacija"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#KlasniUzorci -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#KlasniUzorci">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdfs:comment xml:lang="hr">Podjela po području</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#MnogoGaKoriste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#MnogoGaKoriste">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeKoristenOd"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#MnogoSeKombinira -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#MnogoSeKombinira">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#mozeSeKombiniratiSa"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#MnogoSlicnosti -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#MnogoSlicnosti">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeSlican"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <rdfs:comment xml:lang="hr">Podjela po području</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Reifikacija -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Reifikacija">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaPredikat"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#SlicniSuBuilderu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#SlicniSuBuilderu">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeSlican"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Builder"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#TezinskeKombinacije -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#TezinskeKombinacije">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaPredikat"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaSubjekt"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#imaJakostVeze"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#jeBidirekcionalna"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciKreiranja -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciKreiranja">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <rdfs:comment xml:lang="hr">Podjela po namjeni</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciPonasanja -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciPonasanja">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <rdfs:comment xml:lang="hr">Podjela po namjeni</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciStrukture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciStrukture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+        <rdfs:comment xml:lang="hr">Podjela po namjeni</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Zastarjelo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Zastarjelo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Uzorci"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Abstract_factory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Abstract_factory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciKreiranja"/>
+        <jeSlican rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Builder"/>
+        <jeSlican rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Prototype"/>
+        <koristi rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Factory_method"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Adapter_klasni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Adapter_klasni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#KlasniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciStrukture"/>
+        <jeSlican rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Wrapper"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Adapter_objektni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Adapter_objektni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciStrukture"/>
+        <jeSlican rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Wrapper"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Bridge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Bridge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciStrukture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Builder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Builder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciKreiranja"/>
+        <jeSlican rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Strategy"/>
+        <mozeSeKombiniratiSa rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Composite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Chain_of_responsibility -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Chain_of_responsibility">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciPonasanja"/>
+        <koristi rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Composite"/>
+        <koristi rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Wrapper"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Command -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Command">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciPonasanja"/>
+        <koristi rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Composite"/>
+        <koristi rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Memento"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Composite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Composite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciStrukture"/>
+        <mozeSeKombiniratiSa rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Iterator"/>
+        <mozeSeKombiniratiSa rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Walker"/>
+        <mozeSeKombiniratiSa rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Wrapper"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Decorator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Decorator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciStrukture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Facade -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Facade">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciStrukture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#FactoryMethod_TemplateMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#FactoryMethod_TemplateMethod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#TezinskeKombinacije"/>
+        <imaPredikat rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Template_method"/>
+        <imaSubjekt rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Factory_method"/>
+        <imaJakostVeze rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</imaJakostVeze>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Factory_method -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Factory_method">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#KlasniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciKreiranja"/>
+        <imaVezu rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#veza1"/>
+        <mozeSeKombiniratiSa rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Template_method"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Flyweight -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Flyweight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciStrukture"/>
+        <jeSlican rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Strategy"/>
+        <koristi rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Abstract_factory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Glue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Glue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Zastarjelo"/>
+        <imaNoviNaziv rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Facade"/>
+        <jeSlican rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Mediator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Interpreter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Interpreter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#KlasniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciPonasanja"/>
+        <koristi rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Composite"/>
+        <koristi rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Iterator"/>
+        <koristi rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Walker"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Iterator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Iterator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciPonasanja"/>
+        <koristi rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Memento"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Mediator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Mediator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciPonasanja"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Memento -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Memento">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciPonasanja"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Observer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Observer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciPonasanja"/>
+        <koristi rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Solitaire"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Prototype -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Prototype">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciKreiranja"/>
+        <jeSlican rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Builder"/>
+        <koristi rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Solitaire"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Proxy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Proxy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciStrukture"/>
+        <jeSlican rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Adapter_klasni"/>
+        <jeSlican rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Adapter_objektni"/>
+        <jeSlican rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Wrapper"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Singleton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Singleton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciKreiranja"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Solitaire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Solitaire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Zastarjelo"/>
+        <imaNoviNaziv rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Singleton"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#State -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#State">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciPonasanja"/>
+        <jeSlican rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Bridge"/>
+        <mozeSeKombiniratiSa rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Chain_of_responsibility"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Strategy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Strategy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciPonasanja"/>
+        <jeSlican rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#State"/>
+        <jeSlican rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Walker"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Template_method -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Template_method">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#KlasniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciPonasanja"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Visitor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Visitor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#ObjektniUzorci"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciPonasanja"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Walker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Walker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Zastarjelo"/>
+        <imaNoviNaziv rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Visitor"/>
+        <mozeSeKombiniratiSa rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Iterator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#Wrapper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Wrapper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Zastarjelo"/>
+        <imaNoviNaziv rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Decorator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/GOF#veza1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#veza1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Reifikacija"/>
+        <jePovezanS rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/GOF#Template_method"/>
+        <imaJakostVeze rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</imaJakostVeze>
+        <jeBidirekcionalna rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</jeBidirekcionalna>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciKreiranja"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciPonasanja"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/GOF#UzorciStrukture"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

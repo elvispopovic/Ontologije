@@ -1,0 +1,2306 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/elvis/uzorci/2019/EZO#"
+     xml:base="http://www.semanticweb.org/elvis/uzorci/2019/EZO"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaListuVozaca -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaListuVozaca">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozaca"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaListuVozila -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaListuVozila">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozila"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodpodrucja -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodpodrucja">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodpodrucjaRekurz"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jePodrucjeUPodrucju"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodpodrucjaRekurz -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodpodrucjaRekurz">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jePodrucjeUPodrucjuRekurz"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodrucje -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodrucje">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPogon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPogon">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviVozila"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaPogona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUlice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUlice">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUliceRekurz"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeUlicaUPodrucju"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUliceRekurz -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUliceRekurz">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeUlicaUPodrucjuRekurz"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodpodrucjaRekurz"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUlice"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVozaca -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVozaca">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#vozaciKomanda"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVozilo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVozilo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#vozilaKomanda"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviVozila"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#jePodrucjeUPodrucju -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jePodrucjeUPodrucju">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#jePodrucjeUPodrucjuRekurz -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jePodrucjeUPodrucjuRekurz">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeUlicaUPodrucju -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeUlicaUPodrucju">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeUlicaUPodrucjuRekurz -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeUlicaUPodrucjuRekurz">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeVrsteSpremnika -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeVrsteSpremnika">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviSpremnika"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaSpremnika"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeZaVrstuOtpada -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeZaVrstuOtpada">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaOtpada"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#komandaVozaci -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#komandaVozaci">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#vozaciKomanda"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#komandaVozila -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#komandaVozila">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#vozilaKomanda"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#vozaciKomanda -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#vozaciKomanda">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaListuVozaca"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVozaca"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#vozilaKomanda -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#vozilaKomanda">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviVozila"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaListuVozila"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVozilo"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaBrojCiklusa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaBrojCiklusa">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaBrojMjesta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaBrojMjesta">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodatkeZaUlicu"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaClanova -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaClanova">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaID">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaMjernuJedinicu -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaMjernuJedinicu">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaNosivost"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaNosivost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaNosivost"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodatkeZaSpremnik -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodatkeZaSpremnik"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodatkeZaUlicu -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodatkeZaUlicu">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUdioMali -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUdioMali">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodatkeZaUlicu"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUdioSrednji -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUdioSrednji">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodatkeZaUlicu"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUdioVeliki -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUdioVeliki">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodatkeZaUlicu"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVrijednost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVrijednost">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaNosivost"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojMalih -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojMalih">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodatkeZaSpremnik"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviSpremnika"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojSrednjih -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojSrednjih">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodatkeZaSpremnik"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviSpremnika"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojVelikih -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojVelikih">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodatkeZaSpremnik"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviSpremnika"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Bolovanje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Bolovanje">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaListuVozaca"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozaca"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_GodisnjiOdmor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_GodisnjiOdmor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaListuVozaca"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozaca"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Isprazni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Isprazni">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaListuVozila"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozila"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Izlaz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Izlaz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Kontrola -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Kontrola">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaListuVozila"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozila"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Kreni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Kreni">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaBrojCiklusa"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Kvar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Kvar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaListuVozila"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozila"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Novi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Novi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaListuVozaca"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozaca"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Obradi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Obradi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaListuVozila"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozila"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodrucje"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Otkaz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Otkaz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaListuVozaca"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozaca"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Preuzmi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Preuzmi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVozaca"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVozilo"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviVozila"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Pripremi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Pripremi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaListuVozila"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozila"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Status -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Status">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Vozaci -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Vozaci">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Komande"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Korisnici -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Korisnici"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozaca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozaca">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVozaca"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaClanova"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozila -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozila">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVozilo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviVozila"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaClanova"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#MaliKorisnik -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#MaliKorisnik">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Korisnici"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_BolovanjeLista5 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_BolovanjeLista5">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#komandaVozaci"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Bolovanje_Lista5"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePremaKomandi"/>
+        <rdfs:comment xml:lang="hr">Traženje vozača</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_IsprazniLista4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_IsprazniLista4">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#komandaVozila"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Isprazni_Lista4"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePremaKomandi"/>
+        <rdfs:comment xml:lang="hr">Traženje vozila</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_KontrolaLista2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_KontrolaLista2">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#komandaVozila"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kontrola_Lista2"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePremaKomandi"/>
+        <rdfs:comment xml:lang="hr">Traženje vozila</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_Kvar_Lista4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_Kvar_Lista4">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#komandaVozila"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kvar_Lista4"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePremaKomandi"/>
+        <rdfs:comment xml:lang="hr">Traženje vozila</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_NoviLista7 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_NoviLista7">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#komandaVozaci"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Novi_Lista7"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePremaKomandi"/>
+        <rdfs:comment xml:lang="hr">Traženje vozača</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_Obradi_Banfica_Lista1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_Obradi_Banfica_Lista1">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodrucje"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Obradi_Banfica_Lista1"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePremaKomandi"/>
+        <rdfs:comment xml:lang="hr">Traženje područja</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_PreuzmiHinkoMetalko11 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_PreuzmiHinkoMetalko11">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#komandaVozaci"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Preuzmi_Hinko_Metalko1"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePremaKomandi"/>
+        <rdfs:comment xml:lang="hr">Traženje vozača</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_PreuzmiHinkoMetalko12 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Nalazenje_PreuzmiHinkoMetalko12">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#komandaVozila"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Preuzmi_Hinko_Metalko1"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePremaKomandi"/>
+        <rdfs:comment xml:lang="hr">Traženje vozila</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPodpodrucja"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUlice"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaID"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePodrucjaRekurzivno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePodrucjaRekurzivno">
+        <rdfs:comment xml:lang="hr">Zaključivač bi mogao neka druga pretrazivanja svrstati u podklase. Tada individue tih podklasa neće biti prikazane. Uključi inferred za jasniju zaključenu hijerarhiju.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePremaKomandi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePremaKomandi"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#RekurzivnaPodpodrucja_EZO -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#RekurzivnaPodpodrucja_EZO">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jePodrucjeUPodrucjuRekurz"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#EZO_Anglomeracija_Varazdin"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePodrucjaRekurzivno"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#RekurzivnaPodpodrucja_Varazdin_grad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#RekurzivnaPodpodrucja_Varazdin_grad">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jePodrucjeUPodrucjuRekurz"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Varazdin_grad"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePodrucjaRekurzivno"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#RekurzivneUlice_EZO -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#RekurzivneUlice_EZO">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeUlicaUPodrucjuRekurz"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#EZO_Anglomeracija_Varazdin"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePodrucjaRekurzivno"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#RekurzivneUlice_Varazdin_grad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#RekurzivneUlice_Varazdin_grad">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeUlicaUPodrucjuRekurz"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Varazdin_grad"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#PretrazivanjePodrucjaRekurzivno"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikBio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikBio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviSpremnika"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeZaVrstuOtpada"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Bio"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaMjernuJedinicu"/>
+                <owl:hasValue>kg</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVrijednost"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojMalih"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojSrednjih"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojVelikih"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikMetal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikMetal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviSpremnika"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeZaVrstuOtpada"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Metal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaMjernuJedinicu"/>
+                <owl:hasValue>kg</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVrijednost"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojMalih"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojSrednjih"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojVelikih"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikMjesano1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikMjesano1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviSpremnika"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeZaVrstuOtpada"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesano"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaMjernuJedinicu"/>
+                <owl:hasValue>kg</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVrijednost"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojMalih"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikMjesano2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikMjesano2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviSpremnika"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeZaVrstuOtpada"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesano"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaMjernuJedinicu"/>
+                <owl:hasValue>kg</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVrijednost"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojSrednjih"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojVelikih"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikPapir -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikPapir">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviSpremnika"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeZaVrstuOtpada"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Papir"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaMjernuJedinicu"/>
+                <owl:hasValue>kg</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVrijednost"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojMalih"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojSrednjih"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojVelikih"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikStaklo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikStaklo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviSpremnika"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeZaVrstuOtpada"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Staklo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaMjernuJedinicu"/>
+                <owl:hasValue>kg</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVrijednost"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojMalih"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojSrednjih"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojVelikih"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#SrednjiKorisnik -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#SrednjiKorisnik">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Korisnici"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviSpremnika -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviSpremnika">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaMjernuJedinicu"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVrijednost"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojMalih"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojSrednjih"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#naBrojVelikih"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviVozila -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviVozila">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaPogon"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaPogona"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVozaca"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaMjernuJedinicu"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaVrijednost"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaID"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaID"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUdioMali"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUdioSrednji"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#imaUdioVeliki"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#VelikiKorisnik -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VelikiKorisnik">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Korisnici"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloBio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloBio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviVozila"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeZaVrstuOtpada"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Bio"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloMetal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloMetal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviVozila"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeZaVrstuOtpada"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Metal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloMjesano -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloMjesano">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviVozila"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeZaVrstuOtpada"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesano"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloPapir -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloPapir">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviVozila"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeZaVrstuOtpada"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Papir"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloStaklo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloStaklo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#TipoviVozila"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#jeZaVrstuOtpada"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Staklo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaOtpada -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaOtpada"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaPogona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaPogona"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaSpremnika -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaSpremnika"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Alojza_Stepinca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Alojza_Stepinca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <imaBrojMjesta rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</imaBrojMjesta>
+        <imaID>u2</imaID>
+        <imaUdioMali rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</imaUdioMali>
+        <imaUdioSrednji rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</imaUdioSrednji>
+        <imaUdioVeliki rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</imaUdioVeliki>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Banfica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Banfica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+        <imaUlice rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Dravska"/>
+        <imaUlice rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Rudjera_Boskovica"/>
+        <imaID>p5</imaID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Bio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Bio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaOtpada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Biotko_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Biotko_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloBio"/>
+        <imaPogon rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Elektricni"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Rajka"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vesna"/>
+        <jeZaVrstuOtpada rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Bio"/>
+        <imaID>v4</imaID>
+        <imaMjernuJedinicu>t</imaMjernuJedinicu>
+        <imaVrijednost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</imaVrijednost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Blaz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Blaz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Bolovanje_Lista5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Bolovanje_Lista5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Bolovanje"/>
+        <imaListuVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Borko -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Borko">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Brace_Radica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Brace_Radica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <imaBrojMjesta rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</imaBrojMjesta>
+        <imaID>u12</imaID>
+        <imaUdioMali rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</imaUdioMali>
+        <imaUdioSrednji rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</imaUdioSrednji>
+        <imaUdioVeliki rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</imaUdioVeliki>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Centar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Centar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+        <imaUlice rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Alojza_Stepinca"/>
+        <imaUlice rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Pavlinska"/>
+        <imaUlice rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Petra_Kresimira_IV"/>
+        <imaID>p4</imaID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Diesel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Diesel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaPogona"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Djurek -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Djurek">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+        <imaUlice rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kresimira_Filica"/>
+        <imaUlice rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Tina_Ujevica"/>
+        <imaUlice rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Zrinskih_i_Frankopana"/>
+        <imaID>p6</imaID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Dopunska_ulica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Dopunska_ulica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <imaBrojMjesta rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</imaBrojMjesta>
+        <imaID>u13</imaID>
+        <imaUdioMali rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</imaUdioMali>
+        <imaUdioSrednji rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</imaUdioSrednji>
+        <imaUdioVeliki rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</imaUdioVeliki>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Dravska -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Dravska">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <imaBrojMjesta rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</imaBrojMjesta>
+        <imaID>u8</imaID>
+        <imaUdioMali rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</imaUdioMali>
+        <imaUdioSrednji rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</imaUdioSrednji>
+        <imaUdioVeliki rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</imaUdioVeliki>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Dudo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Dudo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#EZO_Anglomeracija_Varazdin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#EZO_Anglomeracija_Varazdin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+        <imaPodpodrucja rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Varazdin_grad"/>
+        <imaPodpodrucja rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Varazdin_okolica"/>
+        <imaID>p1</imaID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Elektricni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Elektricni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaPogona"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Fran -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Fran">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#GodisnjiOdmor_Lista5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#GodisnjiOdmor_Lista5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_GodisnjiOdmor"/>
+        <imaListuVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Hinko -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Hinko">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Hrascica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Hrascica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+        <imaUlice rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Varazdinska"/>
+        <imaID>p7</imaID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Isprazni_Lista4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Isprazni_Lista4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Isprazni"/>
+        <imaListuVozila rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozila4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ivo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ivo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Izlaz_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Izlaz_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Izlaz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Jalkovec -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Jalkovec">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+        <imaUlice rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Brace_Radica"/>
+        <imaID>p8</imaID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Jura -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Jura">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kanta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kanta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaSpremnika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kiki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kiki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kontejner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kontejner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaSpremnika"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kontrola_Lista2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kontrola_Lista2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Kontrola"/>
+        <imaListuVozila rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozila2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kreni_505 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kreni_505">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Kreni"/>
+        <imaBrojCiklusa rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">505</imaBrojCiklusa>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kreni_bez_ciklusa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kreni_bez_ciklusa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Kreni"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kresimira_Filica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kresimira_Filica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <imaBrojMjesta rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</imaBrojMjesta>
+        <imaID>u5</imaID>
+        <imaUdioMali rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</imaUdioMali>
+        <imaUdioSrednji rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</imaUdioSrednji>
+        <imaUdioVeliki rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</imaUdioVeliki>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kvar_Lista4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kvar_Lista4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Kvar"/>
+        <imaListuVozila rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozila4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozaca"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Hinko"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ivo"/>
+        <imaClanova rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</imaClanova>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozaca"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Luka"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Rajka"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Sven"/>
+        <imaClanova rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</imaClanova>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozaca"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Blaz"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Sven"/>
+        <imaClanova rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</imaClanova>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozaca"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Borko"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Miki"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Pero"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Tvrtko"/>
+        <imaClanova rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</imaClanova>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozaca"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Jura"/>
+        <imaClanova rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</imaClanova>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozaca"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Blaz"/>
+        <imaClanova rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</imaClanova>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozaca"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Novi_Marko"/>
+        <imaClanova rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</imaClanova>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozila1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozila1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozila"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Biotko_1"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Metalko_1"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesanko_1"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesanko_2"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesanko_3"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Papirko_1"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Staklarko_1"/>
+        <imaClanova rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</imaClanova>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozila2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozila2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozila"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesanko_1"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesanko_2"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Papirko_1"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Staklarko_1"/>
+        <imaClanova rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</imaClanova>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozila3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozila3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozila"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Biotko_1"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesanko_3"/>
+        <imaClanova rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</imaClanova>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozila4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozila4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListeVozila"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Metalko_1"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Papirko_1"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Staklarko_1"/>
+        <imaClanova rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</imaClanova>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Luka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Luka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaOtpada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Metalko_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Metalko_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloMetal"/>
+        <imaPogon rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Elektricni"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kiki"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Tvrtko"/>
+        <jeZaVrstuOtpada rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Metal"/>
+        <imaID>v3</imaID>
+        <imaMjernuJedinicu>t</imaMjernuJedinicu>
+        <imaVrijednost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</imaVrijednost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Miki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Miki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesanko_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesanko_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloMjesano"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Luka"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Sven"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Zoki"/>
+        <jeZaVrstuOtpada rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesano"/>
+        <imaID>v5</imaID>
+        <imaMjernuJedinicu>t</imaMjernuJedinicu>
+        <imaVrijednost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</imaVrijednost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesanko_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesanko_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloMjesano"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Blaz"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Fran"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Hinko"/>
+        <jeZaVrstuOtpada rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesano"/>
+        <imaID>v6</imaID>
+        <imaMjernuJedinicu>t</imaMjernuJedinicu>
+        <imaVrijednost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</imaVrijednost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesanko_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesanko_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloMjesano"/>
+        <imaPogon rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Diesel"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Dudo"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Miki"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Viki"/>
+        <imaID>v7</imaID>
+        <imaMjernuJedinicu>t</imaMjernuJedinicu>
+        <imaVrijednost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</imaVrijednost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaOtpada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Novi_Lista7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Novi_Lista7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Novi"/>
+        <imaListuVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Novi_Marko -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Novi_Marko">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Obradi_Banfica_Lista1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Obradi_Banfica_Lista1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Obradi"/>
+        <imaListuVozila rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozila1"/>
+        <imaPodrucje rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Banfica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Otkaz_Lista6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Otkaz_Lista6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Otkaz"/>
+        <imaListuVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozaca6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Papir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Papir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaOtpada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Papirko_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Papirko_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloPapir"/>
+        <imaPogon rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Elektricni"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Borko"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Jura"/>
+        <jeZaVrstuOtpada rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Papir"/>
+        <imaID>v2</imaID>
+        <imaMjernuJedinicu>t</imaMjernuJedinicu>
+        <imaVrijednost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</imaVrijednost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Pavlinska -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Pavlinska">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <imaBrojMjesta rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</imaBrojMjesta>
+        <imaID>u1</imaID>
+        <imaUdioMali rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</imaUdioMali>
+        <imaUdioSrednji rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</imaUdioSrednji>
+        <imaUdioVeliki rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</imaUdioVeliki>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Pero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Pero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Petra_Kresimira_IV -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Petra_Kresimira_IV">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <imaBrojMjesta rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</imaBrojMjesta>
+        <imaID>u3</imaID>
+        <imaUdioMali rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</imaUdioMali>
+        <imaUdioSrednji rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</imaUdioSrednji>
+        <imaUdioVeliki rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</imaUdioVeliki>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Preuzmi_Hinko_Metalko1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Preuzmi_Hinko_Metalko1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Preuzmi"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Hinko"/>
+        <imaVozilo rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Metalko_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Pripremi_Lista2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Pripremi_Lista2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Pripremi"/>
+        <imaListuVozila rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#ListaVozila2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Rajka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Rajka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Rudjera_Boskovica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Rudjera_Boskovica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <imaBrojMjesta rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</imaBrojMjesta>
+        <imaID>u7</imaID>
+        <imaUdioMali rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</imaUdioMali>
+        <imaUdioSrednji rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</imaUdioSrednji>
+        <imaUdioVeliki rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</imaUdioVeliki>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Staklarko_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Staklarko_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloStaklo"/>
+        <imaPogon rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Elektricni"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ivo"/>
+        <imaVozaca rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Pero"/>
+        <jeZaVrstuOtpada rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Staklo"/>
+        <imaID>v1</imaID>
+        <imaMjernuJedinicu>t</imaMjernuJedinicu>
+        <imaVrijednost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</imaVrijednost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Staklo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Staklo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VrstaOtpada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Status_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Status_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Sven -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Sven">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Tina_Ujevica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Tina_Ujevica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <imaBrojMjesta rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</imaBrojMjesta>
+        <imaID>u5</imaID>
+        <imaUdioMali rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</imaUdioMali>
+        <imaUdioSrednji rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</imaUdioSrednji>
+        <imaUdioVeliki rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</imaUdioVeliki>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Tvrtko -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Tvrtko">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Varazdin_grad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Varazdin_grad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+        <imaPodpodrucja rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Banfica"/>
+        <imaPodpodrucja rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Centar"/>
+        <imaPodpodrucja rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Djurek"/>
+        <imaUlice rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Dopunska_ulica"/>
+        <imaID>p2</imaID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Varazdin_okolica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Varazdin_okolica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Podrucja"/>
+        <imaPodpodrucja rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Hrascica"/>
+        <imaPodpodrucja rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Jalkovec"/>
+        <imaID>p3</imaID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Varazdinska -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Varazdinska">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <imaBrojMjesta rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</imaBrojMjesta>
+        <imaID>u11</imaID>
+        <imaUdioMali rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</imaUdioMali>
+        <imaUdioSrednji rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</imaUdioSrednji>
+        <imaUdioVeliki rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</imaUdioVeliki>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vesna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vesna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Viki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Viki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Zoki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Zoki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vozaci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elvis/uzorci/2019/EZO#Zrinskih_i_Frankopana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Zrinskih_i_Frankopana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ulice"/>
+        <imaBrojMjesta rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</imaBrojMjesta>
+        <imaID>u4</imaID>
+        <imaUdioMali rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</imaUdioMali>
+        <imaUdioSrednji rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</imaUdioSrednji>
+        <imaUdioVeliki rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</imaUdioVeliki>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Bolovanje"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_GodisnjiOdmor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Isprazni"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Izlaz"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Kontrola"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Kreni"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Kvar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Novi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Obradi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Otkaz"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Preuzmi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Pripremi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Status"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kom_Vozaci"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#MaliKorisnik"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#SrednjiKorisnik"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VelikiKorisnik"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikBio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikMetal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikMjesano1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikMjesano2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikPapir"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#SpremnikStaklo"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloBio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloMetal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloMjesano"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloPapir"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#VoziloStaklo"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Alojza_Stepinca"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Brace_Radica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Dopunska_ulica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Dravska"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kresimira_Filica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Pavlinska"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Petra_Kresimira_IV"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Rudjera_Boskovica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Tina_Ujevica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Varazdinska"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Zrinskih_i_Frankopana"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Banfica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Centar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Djurek"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#EZO_Anglomeracija_Varazdin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Hrascica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Jalkovec"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Varazdin_grad"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Varazdin_okolica"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Bio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Metal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Mjesano"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Papir"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Staklo"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Blaz"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Borko"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Dudo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Fran"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Hinko"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Ivo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Jura"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kiki"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Luka"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Miki"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Novi_Marko"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Pero"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Rajka"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Sven"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Tvrtko"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Vesna"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Viki"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Zoki"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Diesel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Elektricni"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kanta"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elvis/uzorci/2019/EZO#Kontejner"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
